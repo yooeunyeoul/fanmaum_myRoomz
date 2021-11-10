@@ -1,4 +1,4 @@
-package com.fanmaum.myrooomz
+package com.fanmaum.myroomz
 
 import org.junit.Test
 

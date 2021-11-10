@@ -17,8 +17,13 @@ abstract class BaseFragment<B: ViewBinding>: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding=getFragmentBinding(inflater,container)
-        return super.onCreateView(inflater, container, savedInstanceState)
+        return binding.root
     }
+    protected abstract fun initStartView()
+
+    protected abstract fun bindingAfter()
+
+    protected abstract fun bindingBefore()
 
     abstract fun getFragmentBinding(inflater: LayoutInflater,container:ViewGroup?):B
 

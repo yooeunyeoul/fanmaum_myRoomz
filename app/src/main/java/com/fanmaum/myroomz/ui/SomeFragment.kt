@@ -11,5 +11,16 @@ class SomeFragment : BaseFragment<FragmentSomeBinding>() {
     override fun getFragmentBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
-    ): FragmentSomeBinding = FragmentSomeBinding.inflate(layoutInflater)
+    ): FragmentSomeBinding = FragmentSomeBinding.inflate(layoutInflater,container,false)
+
+    override fun bindingAfter() {
+
+    }
+
+    override fun bindingBefore() {
+
+    }
+
+    override fun initStartView() {
+    }
 }

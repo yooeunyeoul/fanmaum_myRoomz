@@ -12,6 +12,10 @@ abstract class BaseActivity<B : ViewBinding>(
     private var _binding: B? = null
     val binding get() = _binding!!
 
+    protected abstract fun bindingAfter()
+    protected abstract fun bindingBefore()
+    protected abstract fun initStartView()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = bindingFactory(layoutInflater)

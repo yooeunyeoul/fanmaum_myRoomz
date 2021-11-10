@@ -1,4 +1,4 @@
-package com.fanmaum.myrooomz
+package com.fanmaum.myroomz
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

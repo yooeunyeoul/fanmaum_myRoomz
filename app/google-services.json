@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "900609572656",
+    "project_id": "myroomz",
+    "storage_bucket": "myroomz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900609572656:android:320d2337119c41573a12f5",
+        "android_client_info": {
+          "package_name": "com.fanmaum.myroomz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "900609572656-5j41gananu8mttgt9hhaansr5lvd9efl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDr9Uzk2GwzFMOxiPJn8Cz9jjC5XIMbpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "900609572656-5j41gananu8mttgt9hhaansr5lvd9efl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "900609572656-5k9p3708nog3i0opdkgdm45tveqr19do.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fanmaum.myroomz.qa"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -14,6 +14,86 @@
       },
       "oauth_client": [
         {
+          "client_id": "900609572656-hnmo34g3qq1lhj25mlekoup01qrlg9ef.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fanmaum.myroomz",
+            "certificate_hash": "e3909656b37d94ffd3022c9959e3e941c19bebe9"
+          }
+        },
+        {
+          "client_id": "900609572656-5j41gananu8mttgt9hhaansr5lvd9efl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDr9Uzk2GwzFMOxiPJn8Cz9jjC5XIMbpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "900609572656-5j41gananu8mttgt9hhaansr5lvd9efl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "900609572656-5k9p3708nog3i0opdkgdm45tveqr19do.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fanmaum.myroomz.qa"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900609572656:android:9a720b847a64cdbd3a12f5",
+        "android_client_info": {
+          "package_name": "com.fanmaum.myroomz.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "900609572656-5j41gananu8mttgt9hhaansr5lvd9efl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDr9Uzk2GwzFMOxiPJn8Cz9jjC5XIMbpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "900609572656-5j41gananu8mttgt9hhaansr5lvd9efl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "900609572656-5k9p3708nog3i0opdkgdm45tveqr19do.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fanmaum.myroomz.qa"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900609572656:android:9c857672d201ab4a3a12f5",
+        "android_client_info": {
+          "package_name": "com.fanmaum.myroomz.qa"
+        }
+      },
+      "oauth_client": [
+        {
           "client_id": "900609572656-5j41gananu8mttgt9hhaansr5lvd9efl.apps.googleusercontent.com",
           "client_type": 3
         }

@@ -17,6 +17,7 @@ android {
         targetSdk 31
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -35,14 +36,18 @@ android {
             dimension = "myroomz"
             applicationIdSuffix = ".dev"
             versionNameSuffix = "_dev"
+            manifestPlaceholders = [appLabel: "MR_dev"]
+
         }
         create("qa") {
             dimension = "myroomz"
             applicationIdSuffix = ".qa"
             versionNameSuffix = "_qa"
+            manifestPlaceholders = [appLabel: "MR_qa"]
         }
         create("product") {
             dimension = "myroomz"
+            manifestPlaceholders = [appLabel: "MyRoomz"]
         }
     }
 

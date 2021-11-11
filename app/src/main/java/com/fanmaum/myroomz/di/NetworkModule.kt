@@ -1,5 +1,7 @@
 package com.fanmaum.myroomz.di
 
+import com.fanmaum.myroomz.base.BaseDataSource
+import com.fanmaum.myroomz.remote.SomeRemoteDataSourceImpl
 import com.fanmaum.myroomz.remote.SomeService
 import com.fanmaum.myroomz.repository.SomeRepository
 import com.google.gson.Gson
@@ -18,7 +20,6 @@ object NetworkModule {
 
     @Provides
     fun provideSomeService(retrofit: Retrofit) : SomeService = retrofit.create(SomeService::class.java)
-
 
 
 }

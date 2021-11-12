@@ -11,8 +11,8 @@ abstract class BaseFragment<B: ViewBinding>: Fragment() {
     private var _binding : B? =null
     val binding get() = _binding!!
 
-    protected abstract fun bindingAfter()
     protected abstract fun bindingBefore()
+    protected abstract fun bindingAfter()
 
     override fun onCreateView(
         inflater: LayoutInflater,

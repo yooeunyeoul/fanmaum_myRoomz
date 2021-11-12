@@ -1,7 +1,10 @@
 package com.fanmaum.myroomz.repository
 
+import com.fanmaum.myroomz.entries.SomeEntry
 import com.fanmaum.myroomz.remote.SomeRemoteDataSource
 import com.fanmaum.myroomz.remote.SomeRemoteDataSourceImpl
+import com.fanmaum.myroomz.utils.Resource
+import com.fanmaum.myroomz.utils.performGetOperation
 import dagger.hilt.android.scopes.ActivityRetainedScoped
 import javax.inject.Inject
 
@@ -9,5 +12,7 @@ import javax.inject.Inject
 @ActivityRetainedScoped
 class SomeRepository @Inject constructor(private val datasource: SomeRemoteDataSourceImpl) {
 
-
+    fun getData()= performGetOperation {
+        datasource.somFunctionCall()
+    }
 }

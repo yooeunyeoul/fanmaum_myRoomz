@@ -7,7 +7,7 @@ import com.google.firebase.messaging.RemoteMessage
 class MyFirebaseMessaging : FirebaseMessagingService() {
 
     override fun onNewToken(token: String) {
-        Log.e("FIrebaseToken" ,"$token")
+        Log.e("FirebaseToken" ,"$token")
         super.onNewToken(token)
     }
 

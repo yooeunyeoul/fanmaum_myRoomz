@@ -14,12 +14,17 @@ abstract class BaseActivity<B : ViewBinding>(
 
     protected abstract fun bindingAfter()
     protected abstract fun bindingBefore()
-    protected abstract fun initStartView()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = bindingFactory(layoutInflater)
+        bindingBefore()
         setContentView(binding.root)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        bindingAfter()
     }
 
     override fun onDestroy() {

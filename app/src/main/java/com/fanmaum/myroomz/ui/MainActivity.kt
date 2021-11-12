@@ -27,6 +27,4 @@ class MainActivity : BaseActivity<ActivityMainBinding>({ ActivityMainBinding.inf
 
     }
 
-    override fun initStartView() {
-    }
 }

@@ -1,5 +1,6 @@
 package com.fanmaum.myroomz.repository
 
+import androidx.lifecycle.LiveData
 import com.fanmaum.myroomz.entries.SomeEntry
 import com.fanmaum.myroomz.remote.SomeRemoteDataSource
 import com.fanmaum.myroomz.remote.SomeRemoteDataSourceImpl
@@ -12,7 +13,7 @@ import javax.inject.Inject
 @ActivityRetainedScoped
 class SomeRepository @Inject constructor(private val datasource: SomeRemoteDataSourceImpl) {
 
-    fun getData()= performGetOperation {
+    fun getData() : LiveData<Resource<SomeEntry?>> = performGetOperation {
         datasource.somFunctionCall()
     }
 }

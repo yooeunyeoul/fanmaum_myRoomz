@@ -5,6 +5,7 @@ import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import com.fanmaum.myroomz.R
 import com.fanmaum.myroomz.base.BaseActivity
+import com.fanmaum.myroomz.base.BaseViewModel
 import com.fanmaum.myroomz.databinding.ActivityMainBinding
 import com.fanmaum.myroomz.utils.Resource
 import dagger.hilt.android.AndroidEntryPoint
@@ -13,13 +14,15 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>({ ActivityMainBinding.inflate(it) }) {
 
     private val someViewModel : SomeViewModel by viewModels()
+    override val baseViewModel: BaseViewModel
+        get() = someViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
-
+        initObservers()
+        someViewModel.load()
+        someViewModel.load()
     }
 
     override fun bindingBefore() {
@@ -34,7 +37,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>({ ActivityMainBinding.inf
 
                     }
                     Resource.Status.ERROR->{
-
+//                        showToast(R.string.app_name)
                     }
                     Resource.Status.LOADING->{
 
@@ -42,8 +45,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>({ ActivityMainBinding.inf
                 }
             })
         }
-
-
     }
+
 
 }

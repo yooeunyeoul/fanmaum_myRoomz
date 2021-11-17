@@ -23,9 +23,6 @@ object DiModule {
     @Provides
     fun provideGson() : Gson = GsonBuilder().create()
 
-//    @Singleton
-//    @Provides
-//    fun provideSomeRepository(dataSource : SomeRemoteDataSource) = SomeRepository(dataSource)
 
 
 

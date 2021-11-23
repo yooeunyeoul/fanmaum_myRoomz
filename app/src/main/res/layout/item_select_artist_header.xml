@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.fanmaum.myroomz.custom.CancelEditTextView
+        android:id="@+id/search_artist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/selector_cancel_edit_text"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingStart="16dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="12dp"
+        android:textColorHint="@color/brown_grey"
+        android:textColor="@color/black_text"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:imeOptions="actionSearch"
+        android:singleLine="true"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_search_24_gray_1_o_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/artist_tip_3"
+        android:hint="아티스트 개인 또는 그룹 이름">
+        <requestFocus/>
+    </com.fanmaum.myroomz.custom.CancelEditTextView>
+
+    <TextView
+        android:id="@+id/select_artist_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:lineSpacingExtra="4sp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="마이 아티스트\n1명을 선택하세요" />
+
+    <TextView
+        android:id="@+id/artist_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_artist"
+        android:text="전체 아티스트" />
+
+    <com.fanmaum.myroomz.custom.BulletTextView
+        android:id="@+id/artist_tip_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="한 번 설정하면 변경할 수 없어요"
+        android:textColor="@color/brownish_grey"
+        app:bulletGap="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/artist_tip_2" />
+
+    <com.fanmaum.myroomz.custom.BulletTextView
+        android:id="@+id/artist_tip_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="마이 아티스트의 덕질존을 꾸밀 수 있어요"
+        android:textColor="@color/brownish_grey"
+        app:bulletGap="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/select_artist_title" />
+
+    <com.fanmaum.myroomz.custom.BulletTextView
+        android:id="@+id/artist_tip_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="마이 아티스트를 기준으로 콘텐츠를 추천받을 수 있어요"
+        android:textColor="@color/brownish_grey"
+        app:bulletGap="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/artist_tip_1" />
+
+    <TextView
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/artist_title"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/artist_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="normal"
+        android:textSize="12sp"
+        android:textColor="@color/brownish_grey"
+        android:lineSpacingExtra="4sp"
+        android:gravity="end"
+        android:text="ㄱㄴㄷ순"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

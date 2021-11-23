@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.PermissionActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/permission1_icon"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/essential_permission" />
+
+            <TextView
+                android:id="@+id/permission_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:lineSpacingExtra="2sp"
+                android:textColor="@color/brownish_grey"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/permission_title"
+                android:text="마이룸즈 서비스 사용을 위해\n동의가 필요한 내용을 확인해주세요." />
+
+            <TextView
+                android:id="@+id/essential_permission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="16dp"
+                android:lineSpacingExtra="8sp"
+                android:textColor="@color/primary"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintTop_toBottomOf="@+id/permission_content"
+                android:text="필수 접근 권한" />
+
+            <TextView
+                android:id="@+id/permission_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:lineSpacingExtra="12sp"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="앱 접근 권한 안내" />
+
+            <TextView
+                android:id="@+id/permission1_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:lineSpacingExtra="8sp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/permission1_icon"
+                app:layout_constraintTop_toTopOf="@+id/permission1_icon"
+                android:text="저장공간" />
+
+            <TextView
+                android:id="@+id/permission1_des"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/permission1_name"
+                app:layout_constraintStart_toStartOf="@+id/permission1_name"
+                android:layout_marginTop="6dp"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:textColor="@color/brown_grey"
+                android:lineSpacingExtra="8sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                android:text="이미지 저장/첨부 시 사용"/>
+
+            <ImageView
+                android:id="@+id/permission2_icon"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/permission1_icon" />
+
+
+            <TextView
+                android:id="@+id/permission2_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:lineSpacingExtra="8sp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/permission2_icon"
+                app:layout_constraintTop_toTopOf="@+id/permission2_icon"
+                android:text="저장공간" />
+
+            <TextView
+                android:id="@+id/permission2_des"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/permission2_name"
+                app:layout_constraintStart_toStartOf="@+id/permission2_name"
+                android:layout_marginTop="6dp"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:textColor="@color/brown_grey"
+                android:lineSpacingExtra="8sp"
+                android:text="이미지 저장/첨부 시 사용"/>
+
+            <TextView
+                android:id="@+id/optional_permission"
+                app:layout_constraintTop_toBottomOf="@+id/permission2_des"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:textColor="@color/primary"
+                android:lineSpacingExtra="8sp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="40dp"
+                android:text="선택 접근 권한"/>
+
+            <ImageView
+                android:id="@+id/permission3_icon"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/optional_permission" />
+
+
+            <TextView
+                android:id="@+id/permission3_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:lineSpacingExtra="8sp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/permission3_icon"
+                app:layout_constraintTop_toTopOf="@+id/permission3_icon"
+                android:text="저장공간" />
+
+            <TextView
+                android:id="@+id/permission3_des"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/permission3_name"
+                app:layout_constraintStart_toStartOf="@+id/permission3_name"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="16dp"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:textColor="@color/brown_grey"
+                android:lineSpacingExtra="8sp"
+                android:text="이미지 저장/첨부 시 사용 이미지 저장/첨부 시 사용 이미지 저장/첨부 시 사용 이미지 저장/첨부 시 사용"/>
+
+            <LinearLayout
+                android:layout_marginTop="80dp"
+                app:layout_constraintTop_toBottomOf="@+id/permission3_des"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pale_grey"
+                android:orientation="vertical">
+
+                <com.fanmaum.myroomz.custom.BulletTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="24dp"
+                    app:bulletGap="12dp"
+                    android:textColor="@color/brown_grey"
+                    android:text="선택 접근 권한은 허용하지 않으셔도 마이룸즈를 이용하실 수 있습니다."/>
+
+                <com.fanmaum.myroomz.custom.BulletTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="130dp"
+                    app:bulletGap="12dp"
+                    android:textColor="@color/brown_grey"
+                    android:text="‘설정 > 마이룸즈’에서 항목별 엑세스 권한을 수정할 수 있습니다."/>
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/permission_next_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:lineSpacingExtra="8sp"
+        android:padding="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/selector_next_btn"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="다음"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,15 +25,12 @@ abstract class BaseActivity<B : ViewBinding>(
         setContentView(binding.root)
 
         window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
-        initStartView()
-        bindingAfter()
 
     }
 
 
     protected open fun  initObservers(){
-
-        baseViewModel?.message.observe(this, { event->
+        baseViewModel.message.observe(this, { event->
             event.getContentIfNotHandled()?.let {message->
                 this@BaseActivity.showToast(message)
 

@@ -21,6 +21,4 @@ class SomeFragment : BaseFragment<FragmentSomeBinding>() {
 
     }
 
-    override fun initStartView() {
-    }
 }

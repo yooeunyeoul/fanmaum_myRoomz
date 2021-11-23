@@ -1,7 +1,5 @@
 package com.fanmaum.myroomz.di
 
-import com.fanmaum.myroomz.remote.SomeService
-import com.fanmaum.myroomz.repository.SomeRepository
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -25,9 +23,6 @@ object DiModule {
     @Provides
     fun provideGson() : Gson = GsonBuilder().create()
 
-    @Singleton
-    @Provides
-    fun provideSomeRepository() = SomeRepository()
 
 
 

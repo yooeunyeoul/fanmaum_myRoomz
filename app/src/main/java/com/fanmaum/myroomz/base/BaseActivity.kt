@@ -5,27 +5,46 @@ import android.view.LayoutInflater
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
+import com.fanmaum.myroomz.utils.showToast
 
 abstract class BaseActivity<B : ViewBinding>(
     val bindingFactory: (LayoutInflater) -> B
 ) : AppCompatActivity() {
 
+    abstract val baseViewModel: BaseViewModel
     private var _binding: B? = null
     val binding get() = _binding!!
 
-    protected abstract fun bindingAfter()
     protected abstract fun bindingBefore()
-    protected abstract fun initStartView()
+    protected abstract fun bindingAfter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = bindingFactory(layoutInflater)
+        bindingBefore()
         setContentView(binding.root)
 
         window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
         initStartView()
         bindingAfter()
-        bindingBefore()
+
+    }
+
+
+    protected open fun  initObservers(){
+
+        baseViewModel?.message.observe(this, { event->
+            event.getContentIfNotHandled()?.let {message->
+                this@BaseActivity.showToast(message)
+
+            }
+        })
+    }
+
+
+    override fun onStart() {
+        super.onStart()
+        bindingAfter()
     }
 
     override fun onDestroy() {

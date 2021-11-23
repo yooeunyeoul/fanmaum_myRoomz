@@ -11,19 +11,24 @@ abstract class BaseFragment<B: ViewBinding>: Fragment() {
     private var _binding : B? =null
     val binding get() = _binding!!
 
+    protected abstract fun bindingBefore()
+    protected abstract fun bindingAfter()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding=getFragmentBinding(inflater,container)
+        bindingBefore()
         return binding.root
+
     }
-    protected abstract fun initStartView()
 
-    protected abstract fun bindingAfter()
-
-    protected abstract fun bindingBefore()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        bindingAfter()
+    }
 
     abstract fun getFragmentBinding(inflater: LayoutInflater,container:ViewGroup?):B
 

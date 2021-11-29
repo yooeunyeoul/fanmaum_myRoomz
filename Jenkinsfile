@@ -4,7 +4,7 @@ pipeline {
     stages{
         stage('clean gradlew') {
             steps {
-                sh './gradlew clean -Dorg.gradle.java.home=/usr/lib/jvm/java-11-openjdk-amd64'
+                sh './gradlew clean'
             }
         }
         stage('Build'){

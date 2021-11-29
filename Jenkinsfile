@@ -15,7 +15,7 @@ pipeline {
                 stage('develop Build'){
                     when {
                         expression {
-                             return BRANCH_NAME =~ 'Develop'
+                             return BRANCH_NAME =~ 'develop'
                         }
                     }
                     stages{
@@ -34,7 +34,7 @@ pipeline {
                 stage('QA Build'){
                     when {
                         expression {
-                            return BRANCH_NAME =~ 'Release'
+                            return BRANCH_NAME =~ 'release'
                         }
                     }
                     stages{
@@ -51,7 +51,7 @@ pipeline {
                     }
                 }
                 stage('Product Build'){
-                    when { branch 'master'}
+                    when { branch 'main'}
                     stages{
                         stage('build') {
                             stages{

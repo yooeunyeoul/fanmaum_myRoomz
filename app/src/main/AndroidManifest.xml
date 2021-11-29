@@ -3,6 +3,7 @@
     package="com.fanmaum.myroomz">
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="${appLabel}"
@@ -18,13 +19,24 @@
             android:windowSoftInputMode="adjustNothing" />
         <activity
             android:name=".ui.home.HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.PermissionActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.SplashActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
 
         <meta-data
             android:name="io.sentry.traces.sample-rate"
@@ -33,10 +45,11 @@
             android:name="io.sentry.dsn"
             android:value="https://3c146026b24e4d5a9dcd5d57449a682e@o1056847.ingest.sentry.io/6057712" />
 
-        <service android:name=".service.MyFirebaseMessaging"
+        <service
+            android:name=".service.MyFirebaseMessaging"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
 
             </intent-filter>
 

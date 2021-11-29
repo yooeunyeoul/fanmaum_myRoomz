@@ -6,9 +6,11 @@ import androidx.activity.viewModels
 import com.fanmaum.myroomz.base.BaseActivity
 import com.fanmaum.myroomz.base.BaseViewModel
 import com.fanmaum.myroomz.databinding.ActivityLoginBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class LoginActivity : BaseActivity<ActivityLoginBinding>({ ActivityLoginBinding.inflate(it)}) {
-    private val someViewModel : SomeViewModel by viewModels()
+    private val homeViewModel : HomeViewModel by viewModels()
 
     override fun bindingAfter() {
 
@@ -27,5 +29,9 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>({ ActivityLoginBinding.
     }
 
     override val baseViewModel: BaseViewModel
-        get() = someViewModel
+        get() = homeViewModel
+
+    override fun initViewBinding() {
+
+    }
 }

@@ -14,7 +14,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class SplashActivity : BaseActivity<ActivitySplashBinding>({ ActivitySplashBinding.inflate(it) }) {
 
-    private val someViewModel : SomeViewModel by viewModels()
+    private val homeViewModel : HomeViewModel by viewModels()
 
     override fun bindingAfter() {
 
@@ -33,5 +33,9 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>({ ActivitySplashBindi
     }
 
     override val baseViewModel: BaseViewModel
-        get() = someViewModel
+        get() = homeViewModel
+
+    override fun initViewBinding() {
+
+    }
 }

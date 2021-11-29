@@ -21,7 +21,7 @@ pipeline {
                     stages{
                         stage('build') {
                             steps {
-                                sh './gradlew --profile --rerun-tasks :app:assembleDevRelease -Dorg.gradle.java.home=/usr/lib/jvm/java-11-openjdk-amd64'
+                                sh './gradlew --profile --rerun-tasks :app:devRelease -Dorg.gradle.java.home=/usr/lib/jvm/java-11-openjdk-amd64'
                             }
                         }
                         stage('AppDistribution') {

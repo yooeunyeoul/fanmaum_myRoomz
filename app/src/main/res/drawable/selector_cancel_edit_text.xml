@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item app:input_text_check="true" android:state_focused="true">
+        <layer-list>
+            <item android:drawable="@drawable/rectangle_white02_radius_20dp"/>
+            <item android:end="16dp">
+                <bitmap android:gravity="end" android:src="@drawable/ic_xmark_circle_20_gray_1"/>
+            </item>
+        </layer-list>
+    </item>
+    <item app:input_text_check="false" android:state_focused="true" android:drawable="@drawable/rectangle_white02_radius_20dp"/>
+    <item android:state_focused="false" android:drawable="@drawable/rectangle_white02_radius_20dp"/>
+</selector>

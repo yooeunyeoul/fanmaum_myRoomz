@@ -8,10 +8,14 @@
         android:label="${appLabel}"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".App"
         android:theme="@style/Theme.MyRoomz">
-        <meta-data android:name="io.sentry.dsn" android:value="https://3c146026b24e4d5a9dcd5d57449a682e@o1056847.ingest.sentry.io/6057712" />
-        <meta-data android:name="io.sentry.traces.sample-rate" android:value="1.0" />
+        <activity
+            android:name=".ui.NicknameSettingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.artist.SelectArtistActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustNothing" />
         <activity
             android:name=".ui.home.HomeActivity"
             android:exported="true">
@@ -21,6 +25,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="io.sentry.traces.sample-rate"
+            android:value="1.0" />
+        <meta-data
+            android:name="io.sentry.dsn"
+            android:value="https://3c146026b24e4d5a9dcd5d57449a682e@o1056847.ingest.sentry.io/6057712" />
 
         <service android:name=".service.MyFirebaseMessaging"
             android:exported="false">

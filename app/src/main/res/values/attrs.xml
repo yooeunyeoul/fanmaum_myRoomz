@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BulletTextView">
+        <attr name="bulletGap" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CancelEditTextView">
+        <attr name="cancel_drawable" format="reference" />
+        <attr name="cancel_drawable_size" format="dimension" />
+        <attr name="cancel_drawable_margin" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="intput_check_attr">
+        <attr name="input_text_check" format="boolean" />
+    </declare-styleable>
+</resources>

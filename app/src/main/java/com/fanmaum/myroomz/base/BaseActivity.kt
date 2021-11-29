@@ -2,6 +2,7 @@ package com.fanmaum.myroomz.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
 import com.fanmaum.myroomz.utils.showToast
@@ -26,12 +27,13 @@ abstract class BaseActivity<B : ViewBinding>(
         setContentView(binding.root)
         initObservers()
 
+        window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+
     }
 
 
     protected open fun  initObservers(){
-
-        baseViewModel?.message.observe(this, { event->
+        baseViewModel.message.observe(this, { event->
             event.getContentIfNotHandled()?.let {message->
                 this@BaseActivity.showToast(message)
 

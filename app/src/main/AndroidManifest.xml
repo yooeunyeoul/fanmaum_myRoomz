@@ -13,7 +13,7 @@
         <meta-data android:name="io.sentry.dsn" android:value="https://3c146026b24e4d5a9dcd5d57449a682e@o1056847.ingest.sentry.io/6057712" />
         <meta-data android:name="io.sentry.traces.sample-rate" android:value="1.0" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.home.HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

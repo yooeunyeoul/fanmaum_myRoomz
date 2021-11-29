@@ -12,6 +12,7 @@ abstract class BaseFragment<B: ViewBinding>: Fragment() {
     val binding get() = _binding!!
 
     protected abstract fun bindingBefore()
+    protected abstract fun initViewBinding()
     protected abstract fun bindingAfter()
 
     override fun onCreateView(
@@ -21,6 +22,7 @@ abstract class BaseFragment<B: ViewBinding>: Fragment() {
     ): View? {
         _binding=getFragmentBinding(inflater,container)
         bindingBefore()
+        initViewBinding()
         return binding.root
 
     }

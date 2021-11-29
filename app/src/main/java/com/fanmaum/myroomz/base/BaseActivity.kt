@@ -15,13 +15,16 @@ abstract class BaseActivity<B : ViewBinding>(
     val binding get() = _binding!!
 
     protected abstract fun bindingBefore()
+    protected abstract fun initViewBinding()
     protected abstract fun bindingAfter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = bindingFactory(layoutInflater)
         bindingBefore()
+        initViewBinding()
         setContentView(binding.root)
+        initObservers()
 
     }
 

@@ -13,24 +13,16 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>({ ActivityMainBinding.inflate(it) }) {
 
-    private val someViewModel : SomeViewModel by viewModels()
+    private val homeViewModel : HomeViewModel by viewModels()
     override val baseViewModel: BaseViewModel
-        get() = someViewModel
+        get() = homeViewModel
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        initObservers()
-        someViewModel.load()
-        someViewModel.load()
+    override fun initViewBinding() {
+        binding.viewModel = homeViewModel
     }
 
     override fun bindingBefore() {
-
-    }
-
-    override fun bindingAfter() {
-        with(someViewModel) {
+        with(homeViewModel) {
             someData.observe(this@MainActivity, Observer {
                 when (it.status) {
                     Resource.Status.SUCCESS->{
@@ -45,6 +37,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>({ ActivityMainBinding.inf
                 }
             })
         }
+    }
+
+    override fun bindingAfter() {
+        homeViewModel.load()
     }
 
 

@@ -26,7 +26,7 @@ pipeline {
                         }
                         stage('AppDistribution') {
                             steps {
-                                build job : 'Firebase_App_Distribution', parameters: [ string( name: 'nodeLabelName', value: 'master'), string ( name: 'appFilePath', value: "${WORKSPACE}/app/build/outputs/apk/dev/release/app-dev-release.apk" ) ,string( name : "appDistributionId", value : "1:900609572656:android:9a720b847a64cdbd3a12f5" ) , string( name : "testGroup", value :"Android_Tester_Dev" ), string ( name : "des_notes", value : appDistributionReleaseNoteString ) ]
+                                build job : 'Firebase_App_Distribution', parameters: [ string( name: 'nodeLabelName', value: 'master'), string ( name: 'appFilePath', value: "${WORKSPACE}/app/build/outputs/apk/dev/release/app-dev-release-unsigned.apk" ) ,string( name : "appDistributionId", value : "1:900609572656:android:9a720b847a64cdbd3a12f5" ) , string( name : "testGroup", value :"Android_Tester_Dev" ), string ( name : "des_notes", value : appDistributionReleaseNoteString ) ]
                             }
                         }
                     }

@@ -9,14 +9,6 @@ pipeline {
             steps {
                 sh './gradlew clean -Dorg.gradle.java.home=/usr/lib/jvm/java-11-openjdk-amd64'
             }
-             post {
-                success {
-                        slackSend (channel: SLACK_CHANNEL, color: '#38BB86', message: "SUCCESSFUL: [${env.NODE_LABELS}] - clean stage [${env.BUILD_NUMBER}] after ${currentBuild.durationString.split(" and")[0]}  (<${env.BUILD_URL}|Open>)")
-                }
-                failure {
-                    slackSend (channel: SLACK_CHANNEL, color: '#A10002', message: "FAILED: [${env.NODE_LABELS}] - clean stage [${env.BUILD_NUMBER}] after ${currentBuild.durationString.split(" and")[0]} (<${env.BUILD_URL}|Open>)")
-                }
-                        }
         }
         stage('Build'){
             environment {
@@ -90,4 +82,12 @@ pipeline {
             }
         }
     }
+    post {
+            success {
+                slackSend (channel: SLACK_CHANNEL, color: '#38BB86', message: "SUCCESSFUL: [${env.NODE_LABELS}] - Job ${env.JOB_NAME} [${env.BUILD_NUMBER}] after ${currentBuild.durationString.split(" and")[0]}  (<${env.BUILD_URL}|Open>)")
+            }
+            failure {
+                slackSend (channel: SLACK_CHANNEL, color: '#A10002', message: "FAILED: [${env.NODE_LABELS}] - Job ${env.JOB_NAME} [${env.BUILD_NUMBER}] after ${currentBuild.durationString.split(" and")[0]} (<${env.BUILD_URL}|Open>)")
+            }
+        }
 }

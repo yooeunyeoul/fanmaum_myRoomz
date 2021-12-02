@@ -5,13 +5,17 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.fanmaum.myroomz.base.BaseFragment
+import com.fanmaum.myroomz.data.Artist
 import com.fanmaum.myroomz.databinding.FragmentRoomBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class RoomFragment @Inject constructor() : BaseFragment<FragmentRoomBinding>() {
-    private val roomViewModel : RoomViewModel by viewModels()
+    @Inject
+    lateinit var sampleAdapter: SampleAdapter
+
+    private val roomViewModel: RoomViewModel by viewModels()
 
     override fun bindingBefore() {
 
@@ -21,13 +25,30 @@ class RoomFragment @Inject constructor() : BaseFragment<FragmentRoomBinding>() {
         with(binding) {
             viewModel = roomViewModel
             roomRefreshLayout.setOnRefreshListener {
-                roomRefreshLayout.isRefreshing =false
+                roomRefreshLayout.isRefreshing = false
 
             }
+            sampleListView.adapter = sampleAdapter
         }
+        val artistBTS = Artist(name = "아아아", img = "asdf", group = "방탄", isSelect = false)
+        val artistNormal = Artist(name = "아아아", img = "asdf", group = "", isSelect = false)
+        sampleAdapter.submitList(
+            listOf(
+                artistBTS,
+                artistNormal,
+                artistNormal,
+                artistNormal,
+                artistNormal,
+                artistNormal,
+                artistNormal,
+                artistNormal,
+                artistNormal
+            )
+        )
     }
 
     override fun bindingAfter() {
+        1
 
     }
 
@@ -38,7 +59,7 @@ class RoomFragment @Inject constructor() : BaseFragment<FragmentRoomBinding>() {
     override fun getFragmentBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
-    ): FragmentRoomBinding = FragmentRoomBinding.inflate(layoutInflater,container,false)
+    ): FragmentRoomBinding = FragmentRoomBinding.inflate(layoutInflater, container, false)
 
 
 }

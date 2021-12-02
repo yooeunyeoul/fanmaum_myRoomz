@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="artist"
+            type="com.fanmaum.myroomz.data.Artist" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rectangle_pale_grey02_radius_20dp">
+
+        <ImageView
+            android:id="@+id/artist_img"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="16dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/artist_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/ic_heart_20_blue_1_o_2"
+            app:layout_constraintBottom_toBottomOf="@+id/artist_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/artist_img" />
+
+        <TextView
+            android:id="@+id/artist_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/brownish_grey"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:text="@{artist.group}"
+            app:layout_constraintBottom_toBottomOf="@+id/artist_img"
+            app:layout_constraintStart_toEndOf="@+id/artist_img"
+            app:layout_constraintTop_toBottomOf="@+id/artist_name"
+            tools:text="그룹 이름" />
+
+        <TextView
+            android:id="@+id/artist_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="24dp"
+            android:text="@{artist.name}"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/artist_group"
+            app:layout_constraintEnd_toStartOf="@+id/artist_heart"
+            app:layout_constraintStart_toEndOf="@+id/artist_img"
+            app:layout_constraintTop_toTopOf="@+id/artist_img"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="솔로 개인 이름" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

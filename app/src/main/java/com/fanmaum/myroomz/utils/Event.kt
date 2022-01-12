@@ -1,5 +1,7 @@
 package com.fanmaum.myroomz.utils
 
+import androidx.lifecycle.MutableLiveData
+
 open class Event<out T>(private val content: T) {
 
     var hasBeenHandled = false
@@ -22,3 +24,6 @@ open class Event<out T>(private val content: T) {
      */
     fun peekContent(): T = content
 }
+
+fun MutableLiveData<Event<Unit>>.emit() = postValue(Event(Unit))
+fun <T> MutableLiveData<Event<T>>.emit(value: T)  = postValue(Event(value))

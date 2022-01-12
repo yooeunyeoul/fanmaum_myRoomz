@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.DiffUtil
+import com.bumptech.glide.Glide
 import com.fanmaum.myroomz.R
 import com.fanmaum.myroomz.base.BaseAdapter
 import com.fanmaum.myroomz.base.BaseHolder
@@ -16,37 +17,40 @@ import javax.inject.Inject
 class SampleAdapter @Inject constructor(callback: SampleDiffCallback) :
     BaseAdapter<Artist>(callback) {
 
+    lateinit var listener : (Int?) ->Unit
+
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
     ): BaseHolder<out ViewDataBinding, Artist> {
         return when (viewType) {
-            R.layout.item_samplet -> {when (viewType) {
-                R.layout.item_samplet -> {
-                    SampleHolder(
-                        DataBindingUtil.inflate(
-                            LayoutInflater.from(parent.context),
-                            viewType,
-                            parent,
-                            false
+            R.layout.item_samplet -> {
+                when (viewType) {
+                    R.layout.item_samplet -> {
+                        SampleHolder(
+                            DataBindingUtil.inflate(
+                                LayoutInflater.from(parent.context),
+                                viewType,
+                                parent,
+                                false
+                            )
                         )
-                    )
-                }
-                R.layout.item_samplet_header -> {
-                    SampleHeaderHolder(
-                        DataBindingUtil.inflate(
-                            LayoutInflater.from(parent.context),
-                            viewType,
-                            parent,
-                            false
+                    }
+                    R.layout.item_samplet_header -> {
+                        SampleHeaderHolder(
+                            DataBindingUtil.inflate(
+                                LayoutInflater.from(parent.context),
+                                viewType,
+                                parent,
+                                false
+                            )
                         )
-                    )
-                }
-                else -> {
-                    throw IllegalStateException("존재하지 안흔 viewType : $viewType")
-                }
+                    }
+                    else -> {
+                        throw IllegalStateException("존재하지 안흔 viewType : $viewType")
+                    }
 
-            }
+                }
                 SampleHolder(
                     DataBindingUtil.inflate(
                         LayoutInflater.from(parent.context),
@@ -87,14 +91,23 @@ class SampleAdapter @Inject constructor(callback: SampleDiffCallback) :
             }
         }
     }
+
+    inner class SampleHolder(binding: ItemSampletBinding) : BaseHolder<ItemSampletBinding, Artist>(binding) {
+        override fun bind(element: Artist) {
+            super.bind(element)
+            with(binding) {
+                artist = element
+                Glide.with(context).load(element.drawableSampleImage).into(objectImageView)
+                objectImageView.setOnClickListener {
+                    listener.invoke(element.drawableSampleImage)
+                }
+
+            }
+        }
+    }
+
 }
 
-class SampleHolder(binding: ItemSampletBinding) : BaseHolder<ItemSampletBinding, Artist>(binding) {
-    override fun bind(element: Artist) {
-        super.bind(element)
-        binding.artist = element
-    }
-}
 
 class SampleHeaderHolder(binding: ItemSampletHeaderBinding) :
     BaseHolder<ItemSampletHeaderBinding, Artist>(binding) {

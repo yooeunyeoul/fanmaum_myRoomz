@@ -1,44 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
     <data>
+
         <variable
             name="viewModel"
             type="com.fanmaum.myroomz.ui.room.RoomViewModel" />
     </data>
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/room_refresh_layout"
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/sampleListView"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginTop="100dp"
+                android:id="@+id/rootRoomView"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/roomView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_wall_03"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.5" />
+
+
+                <ImageView
+                    android:id="@+id/floor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_floor_03"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/guidelineView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatToggleButton
+                android:id="@+id/toggleBtn"
+                android:layout_marginTop="50dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
-            <TextView
-                android:gravity="center_vertical"
-                android:textSize="40dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:text="THIS IS ROOM"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rootRoomView">
+
+                <TextView
+                    android:id="@+id/xRatio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="100000000"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    tools:text="xRatio : 0.222" />
+
+                <TextView
+                    android:id="@+id/yRatio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="100000000"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    tools:text="xRatio : 0.222" />
+
+                <TextView
+                    android:id="@+id/xPoint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="100000000"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/yPoint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="100000000"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    tools:text="xRatio : 0.222" />
 
 
+            </LinearLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                app:behavior_hideable="false"
+                app:behavior_peekHeight="300dp"
+                app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/headerListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@color/white" />
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/pagerRoomItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
 
 
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

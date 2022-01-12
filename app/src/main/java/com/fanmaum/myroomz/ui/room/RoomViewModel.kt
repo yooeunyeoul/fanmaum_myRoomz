@@ -1,9 +1,124 @@
 package com.fanmaum.myroomz.ui.room
 
+import androidx.lifecycle.MutableLiveData
 import com.fanmaum.myroomz.base.BaseViewModel
+import com.fanmaum.myroomz.data.*
+import com.fanmaum.myroomz.utils.Event
+import com.fanmaum.myroomz.utils.emit
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class RoomViewModel@Inject constructor():BaseViewModel() {
+class RoomViewModel @Inject constructor() : BaseViewModel() {
+
+    val isThisMyRoom = MutableLiveData<Boolean>()
+    val viewAllContentLiveData = MutableLiveData<Event<Unit>>()
+    val viewAllVisitingBookLiveData = MutableLiveData<Event<Unit>>()
+    val viewLikeLiveData = MutableLiveData<Event<Unit>>()
+
+    fun changeData() {
+        commentListLiveData.postValue(
+            listOf(
+                Comment(
+                    name = "내꺼야다넬내꺼야다넬올짱",
+                    profileImage = "https://w.namu.la/s/b5021d2ac1414ce1267e02b4347094873971171388b735e6da51395fbb12d49733b6f71be3cabaab81f35d4c796d3fd6de23ceeb398e713da00cebaba185ea475c7578de671fc76f322c4e3a478d17be5edf8d7abad83baed67a32c52fe62626",
+                    comment = "룸 넘 이뻐여 ㅎㅎㅎ",
+                    date = "2021.10.28 17:00",
+                    one = One(true),
+                    two = Two(true),
+                    three = Three(true),
+                    four = Four(true),
+                    five = Five(true),
+                    six = Six(true),
+                    seven = Seven((true))
+                ),
+                Comment(
+                    name = "내꺼야다넬내꺼야다넬올짱",
+                    profileImage = "https://e7.pngegg.com/pngimages/156/320/png-clipart-spongebob-spongebob.png",
+                    comment = "피어나는 구하지 대고, 끓는 그들을 그들의 청춘 황금시대다. 우리 온갖 하는 불어 인생에 살 실로 살았으며, 없으면, 봄바람이다. 불러 소금이라 넣는 끝에 칼이다. 것은 천자만홍이 청춘의 불어 있는 커다란 때까지 기쁘며, 웅대한 쓸쓸하랴? 그들은 무엇이 인생에 것이다. 가치를 싹이 이상 튼튼하며, 옷을 있는 소리다.이것은 구하지 못하다 것이다. 끓는 있다.",
+                    date = "2021.10.28 17:00",
+                    one = One(false),
+                    two = Two(false),
+                    three = Three(false),
+                    four = Four(true),
+                    five = Five(false),
+                    six = Six(false),
+                    seven = Seven((false))
+                ),
+                Comment(
+                    name = "내꺼야다넬내꺼야다넬올짱",
+                    profileImage = "data:image/jpeg;base64,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",
+                    comment = "피어나는 구하지 대고, 끓는 그들을 그들의 청춘 황금시대다. 우리 온갖 하는 불어 인생에 살 실로 살았으며, 없으면, 봄바람이다. 불러 소금이라 넣는 끝에 칼이다. 것은 천자만홍이 청춘의 불어 있는 커다란 때까지 기쁘며, 웅대한 쓸쓸하랴? 그들은 무엇이 인생에 것이다. 가치를 싹이 이상 튼튼하며, 옷을 있는 소리다.이것은 구하지 못하다 것이다. 끓는 있다.",
+                    date = "2021.10.28 17:00",
+                    one = One(false),
+                    two = Two(false),
+                    three = Three(false),
+                    four = Four(true),
+                    five = Five(false),
+                    six = Six(false),
+                    seven = Seven((false))
+                )
+            )
+
+        )
+    }
+
+    fun viewAllContent(){
+        viewAllContentLiveData.emit()
+    }
+    fun viewAllVisitingBook(){
+        viewAllVisitingBookLiveData.emit()
+    }
+
+    fun viewLike(){
+        viewLikeLiveData.emit()
+    }
+
+    val selectedItemLiveData = MutableLiveData<Int>()
+
+    val roomItemLiveData = MutableLiveData<Int>()
+
+    val commentListLiveData = MutableLiveData(
+        listOf(
+            Comment(
+                name = "내꺼야다넬내꺼야다넬올짱",
+                profileImage = "https://w.namu.la/s/b5021d2ac1414ce1267e02b4347094873971171388b735e6da51395fbb12d49733b6f71be3cabaab81f35d4c796d3fd6de23ceeb398e713da00cebaba185ea475c7578de671fc76f322c4e3a478d17be5edf8d7abad83baed67a32c52fe62626",
+                comment = "룸 넘 이뻐여 ㅎㅎㅎ",
+                date = "2021.10.28 17:00",
+                one = One(false),
+                two = Two(true),
+                three = Three(false),
+                four = Four(false),
+                five = Five(true),
+                six = Six(false),
+                seven = Seven((true))
+            ),
+            Comment(
+                name = "내꺼야다넬내꺼야다넬올짱",
+                profileImage = "https://e7.pngegg.com/pngimages/156/320/png-clipart-spongebob-spongebob.png",
+                comment = "피어나는 구하지 대고, 끓는 그들을 그들의 청춘 황금시대다. 우리 온갖 하는 불어 인생에 살 실로 살았으며, 없으면, 봄바람이다. 불러 소금이라 넣는 끝에 칼이다. 것은 천자만홍이 청춘의 불어 있는 커다란 때까지 기쁘며, 웅대한 쓸쓸하랴? 그들은 무엇이 인생에 것이다. 가치를 싹이 이상 튼튼하며, 옷을 있는 소리다.이것은 구하지 못하다 것이다. 끓는 있다.",
+                date = "2021.10.28 17:00",
+                one = One(false),
+                two = Two(false),
+                three = Three(false),
+                four = Four(true),
+                five = Five(false),
+                six = Six(false),
+                seven = Seven((false))
+            ),
+            Comment(
+                name = "내꺼야다넬내꺼야다넬올짱",
+                profileImage = "data:image/jpeg;base64,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",
+                comment = "피어나는 구하지 대고, 끓는 그들을 그들의 청춘 황금시대다. 우리 온갖 하는 불어 인생에 살 실로 살았으며, 없으면, 봄바람이다. 불러 소금이라 넣는 끝에 칼이다. 것은 천자만홍이 청춘의 불어 있는 커다란 때까지 기쁘며, 웅대한 쓸쓸하랴? 그들은 무엇이 인생에 것이다. 가치를 싹이 이상 튼튼하며, 옷을 있는 소리다.이것은 구하지 못하다 것이다. 끓는 있다.",
+                date = "2021.10.28 17:00",
+                one = One(false),
+                two = Two(false),
+                three = Three(false),
+                four = Four(true),
+                five = Five(false),
+                six = Six(false),
+                seven = Seven((false))
+            )
+        )
+    )
 }

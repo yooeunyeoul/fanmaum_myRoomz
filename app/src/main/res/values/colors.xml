@@ -14,10 +14,27 @@
     <color name="brown_grey">#aaaaaa</color>
     <color name="brownish_grey">#666666</color>
     <color name="pale_grey">#f2f4fc</color>
+    <color name="pale_grey02">#f1f2f8</color>
+    <color name="pale_grey03">#eaedff</color>
     <color name="very_light_pink">#dddddd</color>
     <color name="white02">#f6f6f6</color>
+    <color name="white03">#f9f9f9</color>
     <color name="pale_gray02">#eceefb</color>
     <color name="secondary_yellow">#ffc93e</color>
     <color name="warning">#ff6433</color>
     <color name="success">#00aaa0</color>
+    <color name="dark_periwinkle">#596ee3</color>
+    <color name="h5e6176">#5e6176</color>
+    <color name="h6e738a">#6e738a</color>
+    <color name="heef0f6">#eef0f6</color>
+    <color name="h6f748a">#6f748a</color>
+    <color name="h414458">#414458</color>
+    <color name="hb4b7c7">#b4b7c7</color>
+    <color name="hafb1bd">#afb1bd</color>
+    <color name="h14000000">#14000000</color>
+    <color name="hffc93e">#ffc93e</color>
+    <color name="hff0000">#ff0000</color>
+    <color name="h2b2d3d">#2b2d3d</color>
+    <color name="heeeeee">#eeeeee</color>
+    <color name="hed2424">#ed2424</color>
 </resources>

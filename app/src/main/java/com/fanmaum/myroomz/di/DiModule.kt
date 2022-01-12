@@ -1,9 +1,12 @@
 package com.fanmaum.myroomz.di
 
+import androidx.fragment.app.FragmentManager
+import com.fanmaum.myroomz.ui.room.VisitingListAdapter
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
+import dagger.assisted.AssistedFactory
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
@@ -22,6 +25,12 @@ object DiModule {
 
     @Provides
     fun provideGson() : Gson = GsonBuilder().create()
+
+    @AssistedFactory
+    interface AdapterFactory{
+        fun create(isMyRoom : Boolean, fm : FragmentManager) : VisitingListAdapter
+    }
+
 
 
 

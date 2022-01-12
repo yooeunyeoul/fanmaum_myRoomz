@@ -1,6 +1,7 @@
 package com.fanmaum.myroomz.ui
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -13,6 +14,7 @@ import android.widget.TextView
 import com.fanmaum.myroomz.R
 import com.fanmaum.myroomz.base.BaseDataBindingActivity
 import com.fanmaum.myroomz.databinding.ActivityNicknameSettingBinding
+import com.fanmaum.myroomz.ui.home.HomeActivity
 import com.fanmaum.myroomz.utils.watcher.EditInputFilterBuild
 import com.fanmaum.myroomz.utils.watcher.EmojiFilter
 import com.fanmaum.myroomz.utils.watcher.RecommendFilter
@@ -71,6 +73,12 @@ class NicknameSettingActivity : BaseDataBindingActivity<ActivityNicknameSettingB
                 else -> false
             }
         }
+        binding.nicknameNextBtn.setOnClickListener {
+            startActivity(Intent(this,HomeActivity::class.java))
+            finish()
+        }
+
+
 
         EditInputFilterBuild().setEditInputFilter(EmojiFilter {
             binding.nicknameWarning.text = "특수문자 및 공백은 입력할 수 없습니다."

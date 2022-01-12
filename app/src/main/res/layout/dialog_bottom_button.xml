@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:behavior_draggable="false"
+        app:behavior_hideable="true"
+        app:cardCornerRadius="16dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:text="공유하기"
+                android:textColor="@color/h2b2d3d"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/heeeeee" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:text="신고"
+                android:textColor="@color/hed2424"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/heeeeee" />
+
+            <TextView
+                android:textColor="@color/hed2424"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:text="차단"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/heeeeee" />
+
+            <TextView
+                android:id="@+id/cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:text="취소"
+                android:textColor="@color/h2b2d3d"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

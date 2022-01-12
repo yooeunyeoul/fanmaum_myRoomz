@@ -32,29 +32,31 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>({ ActivityHomeBinding.inf
 
         with(binding) {
             homeBottomTab.run {
-                tabGravity = TabLayout.GRAVITY_FILL
-                TabLayoutMediator(this, mainPager) { tab, position ->
-                    tab.run {
-                        when (position) {
-                            0 -> {
-                                text = getString(R.string.main_room)
-                                icon = ContextCompat.getDrawable(
-                                    context,
-                                    R.drawable.ic_tabbar_home_toggle
-                                )
-                            }
-                            1 -> {
-
-                                text = getString(R.string.tour)
-                                icon = ContextCompat.getDrawable(
-                                    context,
-                                    R.drawable.ic_tabbar_home_toggle
-                                )
-                            }
+                itemIconTintList = null
+                setOnItemSelectedListener {menuItem->
+                    when (menuItem.itemId) {
+                        R.id.myRoomButton->{
+                            mainPager.currentItem = 0
+                            true
                         }
-                    }
+                        R.id.tourButton->{
+                            mainPager.currentItem = 1
+                            true
+                        }
+                        R.id.uploadButton->{
+                            mainPager.currentItem = 2
+                            true
+                        }
+                        R.id.moreButton->{
+                            mainPager.currentItem = 3
+                            true
+                        }
+                        else->{
+                            false
+                        }
 
-                }.attach()
+                    }
+                }
             }
         }
     }

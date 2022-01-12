@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.fanmaum.myroomz.ui.HomeViewModel" />
+
+
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="24dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/titleView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/you_received_emoji_reaction_like_this"
+                android:textColor="@color/h2b2d3d"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/clapView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/emoji_clap"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:text="1,000,000,000"
+                android:textColor="@color/h6f748a"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/clapView"
+                app:layout_constraintStart_toEndOf="@+id/clapView"
+                app:layout_constraintTop_toTopOf="@+id/clapView" />
+
+            <TextView
+                android:id="@+id/eyesView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/emoji_eyes"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clapView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:text="4,501,137"
+                android:textColor="@color/h6f748a"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/eyesView"
+                app:layout_constraintStart_toEndOf="@+id/eyesView"
+                app:layout_constraintTop_toTopOf="@+id/eyesView" />
+
+            <TextView
+                android:id="@+id/moneyView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/emoji_money"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/eyesView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:text="100,005"
+                android:textColor="@color/h6f748a"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/moneyView"
+                app:layout_constraintStart_toEndOf="@+id/moneyView"
+                app:layout_constraintTop_toTopOf="@+id/moneyView" />
+
+            <TextView
+                android:id="@+id/surprisedView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/emoji_surprised"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/moneyView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:text="495"
+                android:textColor="@color/h6f748a"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/surprisedView"
+                app:layout_constraintStart_toEndOf="@+id/surprisedView"
+                app:layout_constraintTop_toTopOf="@+id/surprisedView" />
+
+            <TextView
+                android:id="@+id/starEyesView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/emoji_eye_star"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/surprisedView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:text="300,000,964"
+                android:textColor="@color/h6f748a"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/starEyesView"
+                app:layout_constraintStart_toEndOf="@+id/starEyesView"
+                app:layout_constraintTop_toTopOf="@+id/starEyesView" />
+
+
+            <View
+                android:id="@+id/lineView"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="29dp"
+                android:background="@color/heeeeee"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/starEyesView" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/confirm_button"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lineView">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="14dp"
+                    android:lineSpacingExtra="6sp"
+                    android:text="@string/confirm"
+                    android:textColor="@color/h2b2d3d"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

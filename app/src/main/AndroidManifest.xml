@@ -19,7 +19,8 @@
             android:windowSoftInputMode="adjustNothing" />
         <activity
             android:name=".ui.home.HomeActivity"
-            android:exported="true" />
+            android:exported="true"/>
+
         <activity
             android:name=".ui.PermissionActivity"
             android:exported="true" />
@@ -36,8 +37,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
+        <activity
+            android:name=".ui.room.UserRoomActivity"
+            android:exported="true" />
         <meta-data
             android:name="io.sentry.traces.sample-rate"
             android:value="1.0" />

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/myRoomButton"
+        android:icon="@drawable/ic_tabbar_my_room_toggle"
+        android:title="@string/my_room" />
+
+    <item
+        android:id="@+id/tourButton"
+        android:icon="@drawable/ic_tabbar_tour_toggle"
+        android:title="@string/tour" />
+
+    <item
+        android:id="@+id/uploadButton"
+        android:icon="@drawable/ic_tabbar_upload_toggle"
+        android:title="@string/upload" />
+    <item
+        android:id="@+id/moreButton"
+        android:icon="@drawable/ic_tabbar_more_toggle"
+        android:title="@string/more" />
+
+</menu>

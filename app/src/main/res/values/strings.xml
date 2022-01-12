@@ -1,7 +1,14 @@
 <resources>
     <string name="app_name">My Roomz</string>
-    <string name="main_room">홈</string>
+    <string name="my_room">마이룸</string>
     <string name="tour">투어</string>
     <string name="upload">업로드</string>
     <string name="more">더보기</string>
+    <string name="confirm">확인</string>
+    <string name="you_received_emoji_reaction_like_this">룸 콘텐츠에 반응을 이만큼 받았어요.</string>
+    <string name="emoji_clap">👏</string>
+    <string name="emoji_eyes">👀</string>
+    <string name="emoji_money">💸</string>
+    <string name="emoji_surprised">😮</string>
+    <string name="emoji_eye_star">🤩</string>
 </resources>

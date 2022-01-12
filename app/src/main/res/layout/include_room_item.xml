@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.fanmaum.myroomz.ui.room.RoomViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="180dp">
+
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:orientation="vertical"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            app:behavior_hideable="false"
+            app:behavior_peekHeight="200dp">
+
+            <com.google.android.material.tabs.TabLayout
+                android:background="@color/white"
+                android:id="@+id/headerListView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="50dp" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/pagerRoomItem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

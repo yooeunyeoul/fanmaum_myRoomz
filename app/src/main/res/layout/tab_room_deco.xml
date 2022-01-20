@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="40dp"
+        android:layout_height="40dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/iconView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_tabbar_room_deco_toggle"
+            app:cardCornerRadius="75dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginTop="2.5dp"
+                android:layout_marginEnd="2.5dp"
+                android:background="@drawable/circle_f62cee_stroke_1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/tabIconView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_item_category_24_my" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

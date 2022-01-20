@@ -7,6 +7,7 @@ import com.fanmaum.myroomz.R
 import com.fanmaum.myroomz.base.BaseFragment
 import com.fanmaum.myroomz.data.Artist
 import com.fanmaum.myroomz.databinding.FragmentRoomItemBinding
+import com.fanmaum.myroomz.ui.room.roomDeco.RoomDecoViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -15,7 +16,7 @@ class RoomItemFragment @Inject constructor() : BaseFragment<FragmentRoomItemBind
     @Inject
     lateinit var sampleAdapter: SampleAdapter
 
-    private val roomViewModel: RoomViewModel by activityViewModels()
+    private val roomDecoViewModel: RoomDecoViewModel by activityViewModels()
 
     override fun bindingBefore() {
 
@@ -50,7 +51,7 @@ class RoomItemFragment @Inject constructor() : BaseFragment<FragmentRoomItemBind
         )
         sampleAdapter.listener = {
 //            Glide.with(requireContext()).load(it).into()
-            roomViewModel.selectedItemLiveData.postValue(it)
+            roomDecoViewModel.selectedItemLiveData.postValue(it)
 
         }
     }

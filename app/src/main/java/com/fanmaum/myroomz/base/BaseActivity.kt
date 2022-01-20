@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.ViewDataBinding
 import androidx.viewbinding.ViewBinding
 import com.fanmaum.myroomz.utils.showToast
 
@@ -22,12 +23,15 @@ abstract class BaseActivity<B : ViewBinding>(
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = bindingFactory(layoutInflater)
+        if (_binding is ViewDataBinding) {
+            (_binding as ViewDataBinding).lifecycleOwner = this
+        }
         bindingBefore()
         initViewBinding()
         setContentView(binding.root)
         initObservers()
 
-        window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+//        window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
     }
 

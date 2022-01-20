@@ -11,4 +11,8 @@
     <string name="emoji_money">💸</string>
     <string name="emoji_surprised">😮</string>
     <string name="emoji_eye_star">🤩</string>
+    <string name="save">저장하기</string>
+    <string name="room_deco">룸 데코</string>
+    <string name="tab_object">오브젝트</string>
+    <string name="tab_interior">인테리어</string>
 </resources>

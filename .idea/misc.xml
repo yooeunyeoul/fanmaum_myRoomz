@@ -8,7 +8,10 @@
         <entry key="app/src/main/res/drawable/btn_596ee3_radius12dp.xml" value="0.3234375" />
         <entry key="app/src/main/res/drawable/btn_comment_more.xml" value="0.3203125" />
         <entry key="app/src/main/res/drawable/btn_emoticon_reaction.xml" value="0.3234375" />
+        <entry key="app/src/main/res/drawable/btn_save.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/drawable/btn_see_all_contents.xml" value="0.3234375" />
+        <entry key="app/src/main/res/drawable/circle_f62cee_stroke_1dp.xml" value="0.32395833333333335" />
+        <entry key="app/src/main/res/drawable/circle_f6f6f9.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/drawable/circle_ff0000.xml" value="0.30885416666666665" />
         <entry key="app/src/main/res/drawable/circle_ff0000_stroke_1dp.xml" value="0.30885416666666665" />
         <entry key="app/src/main/res/drawable/circle_ffc93e.xml" value="0.32395833333333335" />
@@ -24,19 +27,29 @@
         <entry key="app/src/main/res/drawable/ic_icon_tab_bar_bottom_my_room_actived.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/drawable/ic_icon_tab_bar_bottom_my_room_default.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/drawable/ic_img_avatar_type1.xml" value="0.3203125" />
+        <entry key="app/src/main/res/drawable/ic_int_wall_empty.xml" value="0.32395833333333335" />
+        <entry key="app/src/main/res/drawable/ic_int_wallpaper_empty.xml" value="0.32395833333333335" />
+        <entry key="app/src/main/res/drawable/ic_item_category_24_like.xml" value="0.32395833333333335" />
+        <entry key="app/src/main/res/drawable/ic_item_category_24_my.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/drawable/ic_lamp_1.xml" value="0.32135416666666666" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.25555555555555554" />
+        <entry key="app/src/main/res/drawable/ic_obj_collect_book.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/drawable/ic_share_24_black_o_2.xml" value="0.3234375" />
         <entry key="app/src/main/res/drawable/ic_tabbar_home_toggle.xml" value="0.25555555555555554" />
         <entry key="app/src/main/res/drawable/ic_tabbar_more_toggle.xml" value="0.32395833333333335" />
+        <entry key="app/src/main/res/drawable/ic_tabbar_my_room_toggle.xml" value="0.32395833333333335" />
+        <entry key="app/src/main/res/drawable/ic_tabbar_room_deco_toggle.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/drawable/ic_tabbar_tour_toggle.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/drawable/ic_tabbar_upload_toggle.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/drawable/ic_user_list_24_black_o_2.xml" value="0.3234375" />
         <entry key="app/src/main/res/drawable/ic_wall_03.xml" value="0.32135416666666666" />
         <entry key="app/src/main/res/drawable/rectangle_14000000_radius_16dp.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/drawable/rectangle_192a8a_radius_16dp.xml" value="0.3203125" />
+        <entry key="app/src/main/res/drawable/rectangle_192a8a_radius_20dp.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/drawable/rectangle_4255c2_radius_16dp.xml" value="0.3203125" />
+        <entry key="app/src/main/res/drawable/rectangle_4255c2_radius_20dp.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/drawable/rectangle_596ee3_radius_18dp.xml" value="0.3203125" />
+        <entry key="app/src/main/res/drawable/rectangle_dadbdf_radius_20dp.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/drawable/rectangle_pale_grey02_radius_20dp.xml" value="0.32135416666666666" />
         <entry key="app/src/main/res/drawable/rectangle_pale_grey03_radius_24dp.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/drawable/rectangle_pale_grey_02_radius_12dp.xml" value="0.3203125" />
@@ -45,15 +58,24 @@
         <entry key="app/src/main/res/drawable/rectangle_primary_radius_8dp.xml" value="0.3203125" />
         <entry key="app/src/main/res/drawable/rectangle_secondary_yellow_radius_16dp.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/drawable/rectangle_secondary_yellow_radius_20dp.xml" value="0.32395833333333335" />
+        <entry key="app/src/main/res/drawable/rectangle_white02_radius_20dp.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/drawable/rectangle_white02_radius_8dp.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/drawable/rectangle_white03_radius_14dp.xml" value="0.3203125" />
         <entry key="app/src/main/res/drawable/rectangle_white_radius_16dp.xml" value="0.3203125" />
         <entry key="app/src/main/res/drawable/rectangle_white_radius_24dp.xml" value="0.3203125" />
         <entry key="app/src/main/res/drawable/rectangle_white_top_left_right_radius_20dp.xml" value="0.32395833333333335" />
+        <entry key="app/src/main/res/drawable/selector_cancel_edit_text.xml" value="0.32395833333333335" />
+        <entry key="app/src/main/res/drawable/selector_cancel_edit_text_nickname.xml" value="0.32395833333333335" />
+        <entry key="app/src/main/res/drawable/selector_next_btn.xml" value="0.32395833333333335" />
+        <entry key="app/src/main/res/layout/activity_eidt_room_info.xml" value="0.3078125" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.17451874366767983" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.3078125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_nickname_setting.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_permission.xml" value="0.30416666666666664" />
+        <entry key="app/src/main/res/layout/activity_room_deco.xml" value="0.40404040404040403" />
+        <entry key="app/src/main/res/layout/activity_select_artist.xml" value="0.3078125" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.16666666666666666" />
         <entry key="app/src/main/res/layout/custom_bar_one.xml" value="0.30520833333333336" />
         <entry key="app/src/main/res/layout/custom_count.xml" value="0.30520833333333336" />
         <entry key="app/src/main/res/layout/custom_room_item.xml" value="0.30520833333333336" />
@@ -63,15 +85,18 @@
         <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.17451874366767983" />
         <entry key="app/src/main/res/layout/fragment_include_item.xml" value="0.32971014492753625" />
         <entry key="app/src/main/res/layout/fragment_my_room.xml" value="0.26645626690712354" />
-        <entry key="app/src/main/res/layout/fragment_room.xml" value="0.17451874366767983" />
+        <entry key="app/src/main/res/layout/fragment_room.xml" value="0.3609535377497099" />
         <entry key="app/src/main/res/layout/fragment_room_item.xml" value="0.32971014492753625" />
+        <entry key="app/src/main/res/layout/fragment_root_category.xml" value="0.3078125" />
         <entry key="app/src/main/res/layout/fragment_some.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/include_back_title_button.xml" value="0.335" />
         <entry key="app/src/main/res/layout/include_room_item.xml" value="0.1812554244833187" />
         <entry key="app/src/main/res/layout/item_room_commentt.xml" value="0.48641975308641977" />
         <entry key="app/src/main/res/layout/item_samplet.xml" value="0.3328804347826087" />
         <entry key="app/src/main/res/layout/item_samplet_header.xml" value="0.32971014492753625" />
         <entry key="app/src/main/res/layout/item_select_artist_default.xml" value="0.3328804347826087" />
         <entry key="app/src/main/res/layout/item_select_artist_header.xml" value="0.3328804347826087" />
+        <entry key="app/src/main/res/layout/tab_room_deco.xml" value="0.7565746940110984" />
         <entry key="app/src/main/res/menu/home_bottom_navigation.xml" value="0.3078125" />
       </map>
     </option>

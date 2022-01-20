@@ -11,36 +11,123 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rootView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/heeeff4">
+
+        <include
+            android:id="@+id/back_title_btn"
+            layout="@layout/include_back_title_button"
+             />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/moneyViewRootView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="14dp"
+            app:layout_constraintStart_toStartOf="@+id/back_title_btn"
+            app:layout_constraintTop_toBottomOf="@+id/back_title_btn">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/moneyView"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_zet_type_1_16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/moneyView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="8,000" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@color/white"
+            app:cardCornerRadius="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/moneyViewRootView"
+            app:layout_constraintStart_toEndOf="@+id/moneyViewRootView"
+            app:layout_constraintTop_toTopOf="@+id/moneyViewRootView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/cartImageView"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_shopping_cart_16_black_o_2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cartImageView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="0" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
 
         <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+            android:layout_height="match_parent"
+            android:layout_marginTop="92dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/rootRoomView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="100dp">
+                android:layout_height="400dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
 
                 <ImageView
                     android:id="@+id/roomView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/ic_wall_03"
+                    android:src="@drawable/ic_int_wallpaper_empty"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/guidelineView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    app:layout_constraintGuide_percent="0.5" />
 
 
                 <ImageView
@@ -48,78 +135,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/ic_floor_03"
+                    android:src="@drawable/ic_int_floor_empty"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/guidelineView" />
+                    app:layout_constraintBottom_toBottomOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.appcompat.widget.AppCompatToggleButton
-                android:id="@+id/toggleBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rootRoomView">
-
-                <TextView
-                    android:id="@+id/xRatio"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="100000000"
-                    android:textColor="@color/black"
-                    android:textSize="20dp"
-                    tools:text="xRatio : 0.222" />
-
-                <TextView
-                    android:id="@+id/yRatio"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="100000000"
-                    android:textColor="@color/black"
-                    android:textSize="20dp"
-                    tools:text="xRatio : 0.222" />
-
-                <TextView
-                    android:id="@+id/xPoint"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="100000000"
-                    android:textColor="@color/black"
-                    android:textSize="20dp" />
-
-                <TextView
-                    android:id="@+id/yPoint"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="100000000"
-                    android:textColor="@color/black"
-                    android:textSize="20dp"
-                    tools:text="xRatio : 0.222" />
-
-
-            </LinearLayout>
-
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/bottomSheetView"
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
-                android:background="@color/white"
+                android:layout_height="200dp"
+                app:cardBackgroundColor="@color/white"
                 android:orientation="vertical"
-                app:cardCornerRadius="16dp"
                 app:behavior_hideable="false"
-                app:behavior_peekHeight="100dp"
+                app:cardCornerRadius="16dp"
                 app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
                 <LinearLayout
@@ -134,6 +165,7 @@
                         android:paddingEnd="16dp">
 
                         <com.google.android.material.tabs.TabLayout
+                            android:background="@color/white"
                             android:id="@+id/tabObjectView"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -193,10 +225,10 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.viewpager2.widget.ViewPager2
-                        android:clipToPadding="false"
                         android:id="@+id/pagerRootCategory"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false" />
 
 
                 </LinearLayout>

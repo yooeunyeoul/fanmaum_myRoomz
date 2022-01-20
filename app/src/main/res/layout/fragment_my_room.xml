@@ -61,7 +61,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/circle_ff0000"
+                    android:src="@drawable/circle_f62cee"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -90,7 +90,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/circle_ff0000"
+                    android:src="@drawable/circle_f62cee"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -216,6 +216,7 @@
                     android:layout_marginEnd="16dp">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/navigateRoomDecoView"
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:background="@drawable/circle_ffc93e"
@@ -324,6 +325,7 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <ImageView
+                            android:id="@+id/editRoomInfoView"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:layout_marginEnd="12dp"
